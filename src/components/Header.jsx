@@ -1,11 +1,13 @@
+import { format } from 'date-fns';
 import logo from '../assets/logo.png';
 const Header = () => {
     return (
         <div className='flex flex-col justify-center items-center mt-10 gap-3'>
-            <img className="w-87.5" src={logo} alt="" />
-            <p>Journalism Without Fear or Favour</p>
+            <img className="w-100" src={logo} alt="" />
+            <p className='text-accent'>Journalism Without Fear or Favour</p>
+            <p className='font-semibold text-accent'>{format(new Date(), "EEEE, MMMM MM, yyyy")}</p>
         </div>
     );
 };
 
-export default Header;
+export default Header; 
