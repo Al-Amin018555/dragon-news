@@ -1,11 +1,15 @@
 import { Outlet } from "react-router";
 import Header from "../components/Header";
+import LastestNews from "../components/LastestNews";
 
 const HomeLayout = () => {
     return (
         <div>
             <header>
                 <Header></Header>
+                <section>
+                    <LastestNews></LastestNews>
+                </section>
             </header>
             <main>
                 <section className="left_nav"></section>
