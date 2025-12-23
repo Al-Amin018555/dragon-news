@@ -1,7 +1,7 @@
 const Home = () => {
     return (
         <div>
-            homepage            
+            Dragon News Home            
         </div>
     );
 };

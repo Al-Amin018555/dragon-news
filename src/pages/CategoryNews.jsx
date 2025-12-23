@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router";
+import NewsCard from "../components/NewsCard/NewsCard";
 
 const CategoryNews = () => {
     const { id } = useParams();
@@ -10,7 +11,7 @@ const CategoryNews = () => {
     useEffect(() => {
         if (id == '0') {
             // eslint-disable-next-line react-hooks/set-state-in-effect
-            setCategoryNews(data);
+            setCategoryNews(data);  
 
         }
         else if (id == '1') {
@@ -28,7 +29,10 @@ const CategoryNews = () => {
 
     return (
         <div>
-            <h2>Total {categoryNews.length} news found</h2>
+            <h2 className="font-bold">Total <span className="text-secondary">{categoryNews.length}</span>  news found</h2>
+            {
+                categoryNews.map(news => <NewsCard key={news.id} news={news}></NewsCard>)
+            }
         </div>
     );
 };
