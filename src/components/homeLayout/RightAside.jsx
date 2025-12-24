@@ -7,7 +7,7 @@ const RightAside = () => {
         <div className="space-y-8">
             <SocialLogin></SocialLogin>  
             <FindUs></FindUs>     
-            <Qzone></Qzone>     
+            <Qzone></Qzone> 
         </div>
     );
 };
