@@ -10,7 +10,7 @@ const Categories = () => {
             <h1 className="font-bold">All Categories ({categories.length})</h1>
             <div className="grid grid-cols-1 mt-5 gap-5">
                 {
-                    categories.map(category => <NavLink to={`/category/${category.id}`} key={category.id} className="btn bg-base-100 bt hover:bg-base-200 text-accent  border-0">{category.name}</NavLink>)
+                    categories.map(category => <NavLink to={`/category/${category.id}`} key={category.id} className="btn shadow-none bg-base-100 bt hover:bg-base-300 text-accent  border-0">{category.name}</NavLink>)
                 }
             </div>
         </div>
