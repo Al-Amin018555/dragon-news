@@ -4,7 +4,16 @@ import { use } from "react";
 import { AuthContext } from "../context/AuthContext";
 const Navbar = () => {
 
-    const { user } = use(AuthContext);
+    const { user,logOut } = use(AuthContext);
+    const handleLogOut = () =>{
+        logOut()
+        .then(() => {
+            alert("You have succesfully logged out");
+        })
+        .catch((error)=>{
+            console.log(error);
+        })
+    }
     return (
         <div className="flex items-center justify-between">
             <div>
@@ -17,7 +26,9 @@ const Navbar = () => {
             </div>
             <div className="login-btn flex items-center gap-4">
                 <img src={userIcon} alt="" />
-                <Link to="/auth/login" className="btn btn-primary px-10">Login</Link>
+                {
+                    user ? <button onClick={handleLogOut} className="btn btn-primary px-10">Log Out</button> : <Link to="/auth/login" className="btn btn-primary px-10">Login</Link>
+                }
             </div>
         </div>
     );
