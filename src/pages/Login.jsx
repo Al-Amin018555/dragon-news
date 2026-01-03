@@ -6,7 +6,7 @@ const Login = () => {
     const [error, setError] = useState("");
     const { signIn } = use(AuthContext);
     const location = useLocation();
-    console.log(location)
+    // console.log(location)
     const navigate = useNavigate();
 
     const handleLogIn = (e) => {
